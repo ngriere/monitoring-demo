@@ -2,8 +2,8 @@
 
 Conf Carbon Monitoring avec:
 
-- Powerpoint Presentation
-- Exemples:
-      - [Configuration HeartBeat as a Service](src/monitors.d/example-app.http.yml)
-      - Configuration MetricBeat as a Service
-      - Configuration APM
+1. Présentation Powerpoint
+2. Exemples de configuration :
+   - [HeartBeat](src/monitors.d/example-app.http.yml)
+   - [Modules MetricBeat](src/modules.d)
+   - [APM]
