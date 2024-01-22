@@ -1,0 +1,9 @@
+# Module: linux
+# Docs: https://www.elastic.co/guide/en/beats/metricbeat/main/metricbeat-module-linux.html
+
+- module: linux
+  enabled: true
+  period: 10s
+  metricsets:
+    - "pageinfo"
+    - "memory"
