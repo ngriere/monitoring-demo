@@ -1,0 +1,28 @@
+################### Heartbeat Configuration Example #########################
+
+# This file is an example configuration file highlighting only some common options.
+# The heartbeat.reference.yml file in the same directory contains all the supported options
+# with detailed comments. You can use it for reference.
+#
+# You can find the full configuration reference here:
+# https://www.elastic.co/guide/en/beats/heartbeat/index.html
+
+############################# Heartbeat ######################################
+
+heartbeat.monitors:
+- type: http
+  id: example-app-monitor
+  name: Example App Monitor
+  enabled: true
+  schedule: '@every 10s'
+  # List of URLs to query
+  urls: ["http://example-app.dev.com/actuator/health"]
+  tags: ["api", "dev"]
+  timeout: 10s
+  check.request:
+    method: GET
+  check.response:
+    status: 200
+    headers:
+      'Content-Type': 'application/json'
+    body: UP
